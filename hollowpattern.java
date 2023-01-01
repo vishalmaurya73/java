@@ -112,6 +112,92 @@ public static void numberpattern(int a){
   }
 
 
+  //Solid Rombus
+  /*
+   * 
+   *      *****
+   *     *****
+   *    *****
+   *   *****
+   *  *****
+   */
+
+   public static void solid_rhombus(int a){
+    for(int i=1; i<=a; i++){
+        for(int j=1; j<=(a-i); j++){
+            System.out.print(" ");
+        }
+        for(int j=1; j<=a; j++){
+            System.out.print("*");
+        }
+        System.out.println();
+    }
+   
+   }
+
+   //Hollow Rombus
+   /*
+    *      *****
+         *    *
+       *    *
+      *    *
+     ***** 
+    */
+
+    public static void hollow_rombus(int a){
+        int j=1; 
+        for(int i=1; i<=a; i++){
+            for(j =1; j<=(a-i); j++){
+                System.out.print(" ");
+            }
+            for(j=1; j<=a; j++){
+                if(i==1|| i==a || j==1 || j==a ){
+                    System.out.print("*");
+                }
+                else{
+                    System.out.print(" ");
+                }
+                
+            }
+            System.out.println();
+        }
+    }
+
+    // Dimoand pattern
+    /*
+     *     *
+     *    ***
+     *   *****
+     *  *******
+     *  *******
+     *   *****
+     *    ***
+     *     *
+     */
+
+     public static void diomand_pattern(int a){
+        for(int i=1; i<=a; i++){
+            for(int j=1; j<=(a-i); j++){
+                System.out.print(" ");
+            }
+            for(int j=1; j<=(2*i)-1; j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        
+        for(int i=a; i>=1; i--){
+            for(int j=1; j<=(a-i); j++){
+                System.out.print(" ");
+            }
+            for(int j=1; j<=(2*i)-1; j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+     }
+
+
     public static void main(String []args){
         Scanner sc=new Scanner(System.in);
         int a=sc.nextInt();
@@ -125,7 +211,13 @@ public static void numberpattern(int a){
 
        //floyedpattern(a);
 
-       solidpattern(a);
+       //solidpattern(a);
+
+       //solid_rhombus(a);
+
+       //hollow_rombus(a);
+
+       diomand_pattern(a);
     }
     
 }
